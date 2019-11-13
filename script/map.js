@@ -10,3 +10,19 @@ function init(){
 			position: google.maps.ControlPosition.BOTTOM_CENTER
 		}
 	};
+	var theMap = new google.maps.Map(la, mapOptions);
+
+	var marker = new google.maps.Marker({
+		position: myCity,
+		map: theMap,
+		animation: google.maps.Animation.BOUNCE,
+		
+	});
+	var contentString = '<h1> Chicago </h1><p> My city</p>';
+
+	var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  	});
+	google.maps.event.addListener(marker, 'mouseover', function() {
+    	infowindow.open(myMap, marker);
+  	});
