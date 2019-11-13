@@ -1,20 +1,19 @@
 function init(){
-	//alert('it works');
-	var la = document.getElementById('canvas');
-	var myCity = new google.maps.LatLng(41.881832,-87.623177);
+	var el = document.getElementById('canvas');
+	var myLocation = new google.maps.LatLng(41.881832,-87.623177);
 	var mapOptions = {
-		center: myCity
+		center: myLocation
 		zoom: 18,
 		mapTypeId: google.maps.MapTypeId.SATELLITE,
 		mapTypeControlOptions: {
 			position: google.maps.ControlPosition.BOTTOM_CENTER
 		}
 	};
-	var theMap = new google.maps.Map(la, mapOptions);
+	var myMap = new google.maps.Map(el, mapOptions);
 
 	var marker = new google.maps.Marker({
-		position: myCity,
-		map: theMap,
+		position: myLocation,
+		map: myMap,
 		animation: google.maps.Animation.BOUNCE,
 		
 	});
@@ -26,6 +25,6 @@ function init(){
 	google.maps.event.addListener(marker, 'mouseover', function() {
     	infowindow.open(myMap, marker);
   	});
-	}
+}
 
 google.maps.event.addDomListener(window, 'load', init);
