@@ -60,3 +60,9 @@ header {
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
 }
+#canvas {
+	width: 700px;
+	height: 500px;
+	background-color: #ccc;
+	margin: 30px auto;
+	}

@@ -3,7 +3,7 @@ function init(){
 	var la = document.getElementById('canvas');
 	var myCity = new google.maps.LatLng(41.881832,-87.623177);
 	var mapOptions = {
-		center: myLocation,myLocation2,myLocation1,
+		center: myCity
 		zoom: 18,
 		mapTypeId: google.maps.MapTypeId.SATELLITE,
 		mapTypeControlOptions: {
@@ -26,4 +26,6 @@ function init(){
 	google.maps.event.addListener(marker, 'mouseover', function() {
     	infowindow.open(myMap, marker);
   	});
-	google.maps.event.addDomListener(window, 'load', init);
+	}
+
+google.maps.event.addDomListener(window, 'load', init);
