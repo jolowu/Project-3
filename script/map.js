@@ -17,7 +17,7 @@ function init(){
 		animation: google.maps.Animation.BOUNCE,
 		
 	});
-	var contentString = '<h1> Chicago </h1><p> My city</p>';
+	var contentString = '<h2> Chicago </h2><h5> My city</h5>';
 
 	var infowindow = new google.maps.InfoWindow({
       content: contentString
