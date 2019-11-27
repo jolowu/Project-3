@@ -19,13 +19,13 @@ function init(){
 		animation: google.maps.Animation.BOUNCE,
 		
 	});
-	var marker = new google.maps.Marker({
+	var markerx = new google.maps.Marker({
 		position: myLocationx,
 		map: myMap,
 		animation: google.maps.Animation.BOUNCE,
 		
 	});
-	var marker = new google.maps.Marker({
+	var markery = new google.maps.Marker({
 		position: myLocationy,
 		map: myMap,
 		animation: google.maps.Animation.BOUNCE,
@@ -36,8 +36,24 @@ function init(){
 	var infowindow = new google.maps.InfoWindow({
       content: contentString
   	});
+	var contentStringx = '<h2> Lagos, Nigeria </h2><h5> Where I was born</h5>';
+
+	var infowindowx = new google.maps.InfoWindow({
+      content: contentStringx
+  	});
+	var contentStringy = '<h2> Tokyo, Japan </h2><h5> My last Vacation</h5>';
+
+	var infowindowy = new google.maps.InfoWindow({
+      content: contentStringy
+  	});
 	google.maps.event.addListener(marker, 'mouseover', function() {
     	infowindow.open(myMap, marker);
+  	});
+	google.maps.event.addListener(markerx, 'mouseover', function() {
+    	infowindowx.open(myMap, markerx);
+  	});
+	google.maps.event.addListener(markery, 'mouseover', function() {
+    	infowindowy.open(myMap, markery);
   	});
 }
 
