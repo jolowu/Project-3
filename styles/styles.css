@@ -80,3 +80,14 @@ header {
 	background-color: #ccc;
 	margin: 30px auto;
 	}
+@media screen and (min-width: 400px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #333;
+  }
+}
